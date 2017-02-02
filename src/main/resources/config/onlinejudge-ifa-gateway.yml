@@ -1,0 +1,23 @@
+server:
+  port: 4000
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  routes:
+    onlinejudge-ifa-oauth:
+        path: /onlinejudge-ifa-oauth/**
+        #url: http://onlinejudge-ifa-oauth:8080 # replace "url" by "serviceId"
+        serviceId: onlinejudge-ifa-oauth
+        stripPrefix: false
+        sensitiveHeaders:
+    onlinejudge-ms-user:
+        path: /onlinejudge-ms-user/**
+        #url: http://onlinejudge-ms-user:8080 # replace "url" by "serviceId"
+        serviceId: onlinejudge-ms-user
+        stripPrefix: false
+        sensitiveHeaders:
+ribbon:
+  ConnectTimeout: 30000
+  ReadTimeout: 60000
