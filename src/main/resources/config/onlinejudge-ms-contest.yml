@@ -9,5 +9,5 @@ spring:
       port: 27017
 
 server:
-  context-path: /onlinejudge-ifa-oauth
+  context-path: /onlinejudge-ms-contest
   port: 0

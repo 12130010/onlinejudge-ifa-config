@@ -1,10 +1,13 @@
 eureka:
   instance:
     prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 3
+    leaseExpirationDurationInSeconds: 5
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:8762/eureka/
-      
+      defaultZone: http://127.0.0.1:8761/eureka/
+    registry-fetch-interval-seconds: 5
+
 hystrix:
   command:
     default:
@@ -14,10 +17,19 @@ hystrix:
             timeoutInMilliseconds: 60000
         timeout:
           enabled: true
-
+          
+#oauth2
+oauth2:
+  client:
+    access-token-uri: http://onlinejudge-ifa-oauth/onlinejudge-ifa-oauth/oauth/check_token
 #Client credentical
 onlinejudge:
     ms:
         user:
             id: userService
             password: userService@password
+            checkToken: ${oauth2.client.access-token-uri}
+        contest:
+            id: contesService
+            password: contestService@password
+            checkToken: ${oauth2.client.access-token-uri}
