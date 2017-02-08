@@ -33,3 +33,7 @@ onlinejudge:
             id: contesService
             password: contestService@password
             checkToken: ${oauth2.client.access-token-uri}
+        resource:
+            id: resourceService
+            password: resourceService@password
+            checkToken: ${oauth2.client.access-token-uri}

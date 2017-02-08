@@ -1,0 +1,7 @@
+server:
+  context-path: /onlinejudge-ms-resources
+  port: 8080
+  
+path:
+  problem: D:/hle56/test/problem/
+  submit: D:/hle56/test/submit/
