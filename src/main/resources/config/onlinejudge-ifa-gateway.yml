@@ -24,6 +24,12 @@ zuul:
         serviceId: onlinejudge-ms-contest
         stripPrefix: false
         sensitiveHeaders:
+    onlinejudge-ms-resources:
+        path: /onlinejudge-ms-resources/**
+        #url: http://onlinejudge-ms-contest:8080 # replace "url" by "serviceId"
+        serviceId: onlinejudge-ms-resources
+        stripPrefix: false
+        sensitiveHeaders:
 ribbon:
   ConnectTimeout: 30000
   ReadTimeout: 60000

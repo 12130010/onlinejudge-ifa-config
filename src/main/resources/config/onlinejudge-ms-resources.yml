@@ -1,7 +1,7 @@
 server:
   context-path: /onlinejudge-ms-resources
-  port: 8080
+  port: 0
   
 path:
-  problem: D:/hle56/test/problem/
-  submit: D:/hle56/test/submit/
+  problem: D:/hle56/test/problem/ #root path to store problem
+  submit: D:/hle56/test/submit/ #root path to store summit

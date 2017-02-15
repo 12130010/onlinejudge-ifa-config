@@ -17,23 +17,18 @@ hystrix:
             timeoutInMilliseconds: 60000
         timeout:
           enabled: true
-          
+ 
+spring:
+  http:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 50MB
+      
+ 
 #oauth2
 oauth2:
   client:
-    access-token-uri: http://onlinejudge-ifa-oauth/onlinejudge-ifa-oauth/oauth/check_token
-#Client credentical
-onlinejudge:
-    ms:
-        user:
-            id: userService
-            password: userService@password
-            checkToken: ${oauth2.client.access-token-uri}
-        contest:
-            id: contesService
-            password: contestService@password
-            checkToken: ${oauth2.client.access-token-uri}
-        resource:
-            id: resourceService
-            password: resourceService@password
-            checkToken: ${oauth2.client.access-token-uri}
+    check-token-uri: http://onlinejudge-ifa-oauth/onlinejudge-ifa-oauth/oauth/check_token
+    accessTokenUri: http://onlinejudge-ifa-oauth/onlinejudge-ifa-oauth/oauth/token
+  resource:
+    user-info-uri: http://onlinejudge-ifa-oauth/onlinejudge-ifa-oauth/users/current

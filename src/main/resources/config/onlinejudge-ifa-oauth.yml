@@ -11,3 +11,16 @@ spring:
 server:
   context-path: /onlinejudge-ifa-oauth
   port: 0
+
+#Client credentical
+onlinejudge:
+    ms:
+        user:
+            id: userService
+            password: userService@password
+        contest:
+            id: contesService
+            password: contestService@password
+        resource:
+            id: resourceService
+            password: resourceService@password
