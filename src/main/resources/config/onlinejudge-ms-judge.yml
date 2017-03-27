@@ -1,0 +1,7 @@
+server:
+  context-path: /onlinejudge-ms-judge
+  port: 0
+  
+path:
+  data: C:\Users\oONhuocQuyOo\Desktop\tmp\judge\data\ #root path to store data
+  submit: C:\Users\oONhuocQuyOo\Desktop\tmp\judge\submit\ #root path to store summit

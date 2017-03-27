@@ -19,8 +19,11 @@ onlinejudge:
             id: userService
             password: userService@password
         contest:
-            id: contesService
+            id: contestService
             password: contestService@password
         resource:
             id: resourceService
             password: resourceService@password
+        judge:
+            id: judgeService
+            password: judgeService@password
