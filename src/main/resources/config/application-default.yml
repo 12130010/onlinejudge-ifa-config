@@ -5,7 +5,7 @@ eureka:
     leaseExpirationDurationInSeconds: 5
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: http://nhuocquy.xyz:8761/eureka/
     registry-fetch-interval-seconds: 5
 
 hystrix:
@@ -26,9 +26,22 @@ spring:
       
  
 #oauth2
+#oauth2:
+#  client:
+#    check-token-uri: http://onlinejudge-ifa-oauth/onlinejudge-ifa-oauth/oauth/check_token
+#    accessTokenUri: http://onlinejudge-ifa-oauth/onlinejudge-ifa-oauth/oauth/token
+#  resource:
+#    user-info-uri: http://onlinejudge-ifa-oauth/onlinejudge-ifa-oauth/users/current
+
 oauth2:
   client:
-    check-token-uri: http://onlinejudge-ifa-oauth/onlinejudge-ifa-oauth/oauth/check_token
-    accessTokenUri: http://onlinejudge-ifa-oauth/onlinejudge-ifa-oauth/oauth/token
+    check-token-uri: http://onlinejudge-ifa-gateway/onlinejudge-ifa-oauth/oauth/check_token
+    accessTokenUri: http://onlinejudge-ifa-gateway/onlinejudge-ifa-oauth/oauth/token
   resource:
-    user-info-uri: http://onlinejudge-ifa-oauth/onlinejudge-ifa-oauth/users/current
+    user-info-uri: http://onlinejudge-ifa-gateway/onlinejudge-ifa-oauth/users/current
+    
+mail:
+  username: hoangnhuocquy0@gmail.com
+  password: anhthatsucanem
+  host: smtp.gmail.com
+  port: 587
